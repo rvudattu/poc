@@ -16,8 +16,6 @@ jobs:
   setup-build-deploy:
     name: Setup, Build, Publish, and Deploy
     runs-on: ubuntu-latest
-    				   
-
     steps:
     - name: Checkout
       uses: actions/checkout@v2
@@ -26,7 +24,7 @@ jobs:
       uses: actions/setup-python@v4
       with:
         python-version: '3.7'
-        
+
     # Setup gcloud CLI
     - name: Set up Cloud SDK
       uses: google-github-actions/setup-gcloud@v1
