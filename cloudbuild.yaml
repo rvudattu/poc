@@ -1,7 +1,0 @@
-steps:
-- name: 'gcr.io/cloud-builders/docker'
-  args: ['build', '-t', 'gcr.io/poc-test-project-312918/cloud-poc:latest', '.']
-- name: 'gcr.io/cloud-builders/docker'
-  args: ['push', 'gcr.io/poc-test-project-312918/cloud-poc']
-- name: 'gcr.io/cloud-builders/gcloud'
-  args: ['beta', 'run', 'deploy', 'cloud-poc', '--image=gcr.io/gcr.io/poc-test-project-312918/cloud-poc', '--region=us-east4','--platform=managed','--allow-unauthenticated']
